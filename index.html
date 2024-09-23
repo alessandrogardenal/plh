@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Cut Creations</title>
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #c0d6df;
+            --text-color: #333;
+            --background-color: #f0f4f8;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2c5282;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laser Cut Creations</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="home" class="fade-in">
+        <h2>Welcome to Laser Cut Creations</h2>
+        <p>We specialize in unique, custom laser cut products for all your needs. Our precision craftsmanship and attention to detail ensure that each piece is a work of art.</p>
+        <img src="/api/placeholder/800/400" alt="Laser cutting in action" style="max-width:100%; height:auto; border-radius:8px;">
+    </main>
+    <main id="shop" class="fade-in" style="display:none;">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="/api/placeholder/250/250" alt="Product 1">
+                <h3>Decorative Wall Art</h3>
+                <p>Intricate laser-cut designs to enhance your home decor.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/api/placeholder/250/250" alt="Product 2">
+                <h3>Custom Signage</h3>
+                <p>Personalized signs for businesses and events.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/api/placeholder/250/250" alt="Product 3">
+                <h3>Jewelry Box</h3>
+                <p>Elegant storage solutions for your precious items.</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="/api/placeholder/250/250" alt="Product 4">
+                <h3>3D Puzzle</h3>
+                <p>Challenging and fun laser-cut puzzles for all ages.</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <main id="contact" class="fade-in" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question about our products or want to place a custom order, we're here to help.</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button>Send Message</button>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>Email: info@lasercutcreations.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Main St, Anytown, USA</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Laser Cut Creations. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('main').forEach(main => {
+                    main.style.display = 'none';
+                });
+                const targetMain = document.querySelector(this.getAttribute('href'));
+                targetMain.style.display = 'block';
+                targetMain.classList.remove('fade-in');
+                void targetMain.offsetWidth; // Trigger reflow
+                targetMain.classList.add('fade-in');
+            });
+        });
+    </script>
+</body>
+</html>
